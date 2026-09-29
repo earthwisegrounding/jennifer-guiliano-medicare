@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300">
+  <defs>
+    <clipPath id="arch"><path d="M14 286V122a106 106 0 0 1 212 0v164z"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbeee2"/>
+      <stop offset=".45" stop-color="#f8d6b4"/>
+      <stop offset=".8" stop-color="#f1ad72"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".45" cy=".4" r=".6">
+      <stop offset="0" stop-color="#fcd98a"/>
+      <stop offset=".6" stop-color="#f0b43c"/>
+      <stop offset="1" stop-color="#e8943a"/>
+    </radialGradient>
+    <g id="saguaro">
+      <rect x="-8" y="-78" width="16" height="80" rx="8"/>
+      <rect x="-26" y="-40" width="22" height="11" rx="5.5"/>
+      <rect x="-26" y="-62" width="11" height="33" rx="5.5"/>
+      <rect x="4" y="-50" width="22" height="11" rx="5.5"/>
+      <rect x="15" y="-74" width="11" height="35" rx="5.5"/>
+    </g>
+  </defs>
+  <!-- offset shadow arch -->
+  <path d="M26 298V134a106 106 0 0 1 212 0v164z" fill="none" stroke="#1f5a4e" stroke-width="2.5" opacity=".55"/>
+  <g clip-path="url(#arch)">
+    <rect width="240" height="300" fill="url(#sky)"/>
+    <circle cx="132" cy="182" r="50" fill="url(#sun)"/>
+    <path d="M0 206l44-26 34 16 42-34 36 24 30-14 54 30v98H0z" fill="#d88a5c" opacity=".7"/>
+    <path d="M0 232l54-20 44 14 52-24 48 18 42-8v88H0z" fill="#a8431e"/>
+    <path d="M0 258l70-12 64 10 58-8 48 6v46H0z" fill="#0f2e2a"/>
+    <g fill="#0f2e2a">
+      <use href="#saguaro" transform="translate(66 256) scale(.9)"/>
+      <use href="#saguaro" transform="translate(182 254) scale(.5)"/>
+    </g>
+  </g>
+  <path d="M14 286V122a106 106 0 0 1 212 0v164z" fill="none" stroke="#a8431e" stroke-width="4"/>
+</svg>

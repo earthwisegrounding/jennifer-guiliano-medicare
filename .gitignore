@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+node_modules/
+_screens/
+.claude/

@@ -56,6 +56,22 @@
     });
   });
 
+  /* ---------- Click-to-load YouTube video ----------
+     Nothing loads from YouTube until Play is pressed. Without JavaScript the link opens YouTube. */
+  document.querySelectorAll(".video-facade[data-youtube-id]").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(link.getAttribute("data-youtube-id")) + "?autoplay=1&rel=0";
+      iframe.title = link.getAttribute("data-title") || "Video";
+      iframe.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+      link.replaceWith(iframe);
+      iframe.focus();
+    });
+  });
+
   /* ---------- Lead form (PLACEHOLDER — not connected to any endpoint yet) ---------- */
   document.querySelectorAll("form[data-placeholder-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {

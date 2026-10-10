@@ -838,6 +838,15 @@ fieldset.field { border: 0; padding: 0; margin: 0; }
 .footer-legal .nongov a, .footer-legal .compliance a { color: #fff; }
 .copyright { margin-top: 18px; }
 
+/* Site credit: one quiet centered line under the legal text */
+.site-credit { margin: 30px 0 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.2); text-align: center; font-size: .85rem; line-height: 1.35; }
+.site-footer .site-credit a { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; max-width: 100%; color: #e4ece8; text-decoration: none; }
+.site-credit img { width: 53px; height: 40px; flex: none; }
+.site-credit span { min-width: 0; text-align: left; }
+.site-credit strong { color: #fff; font-weight: 700; transition: color .15s; }
+.site-footer .site-credit a:hover { color: #fff; }
+.site-footer .site-credit a:hover strong { color: var(--sun); }
+
 /* ---------- Mobile bottom bar ---------- */
 .mobile-cta { display: none; }
 
@@ -1003,6 +1012,7 @@ dl.facts dd { margin: 0; }
   .site-footer { background: #fff; color: #000; margin-top: 0; }
   .site-footer::before { display: none; }
   .site-footer a { color: #000; }
+  .site-footer .site-credit a, .site-credit strong { color: #000; }
   .cta-band { background: #fff; color: #000; border: 2px solid #000; padding-bottom: 32px; }
   .cta-band h2, .cta-band p { color: #000; }
 }
